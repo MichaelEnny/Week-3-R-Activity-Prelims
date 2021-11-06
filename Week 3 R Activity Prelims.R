@@ -52,7 +52,7 @@ subset(HeightandWeight, Just_Height>65)
 #This shows me how many rows are in my dataset
 nrow(HeightandWeight)
 #This shows me how many columns are in my dataset
-nrow(HeightandWeight)
+ncol(HeightandWeight)
 
 #This also shows me how many rows and columns with just one function
 #TASK: replace the ? with the correct function
@@ -66,6 +66,7 @@ library(tibble)
 #TASK: Run the next few lines of code and note the difference in what the lines return
 #Put your noted difference in a new comment below
 #The tibble package is used to create/construct data frames
+#The NewWomen is a combination of 4 columns while the second (NewWomen1) line of code is a combination of 2 columns
 NewWomen<-tibble(HeightandWeight, height=Just_Height, weight=Just_Weight)
 NewWomen1<-tibble(height=Just_Height, weight=Just_Weight)
 View(NewWomen)
@@ -86,5 +87,3 @@ ggplot(NewWomen, aes(x=height, y=weight)) +
 #Optional 'Just for fun' TASK: Change the arguments for the geom point and see what happens to the plot
 ggplot(NewWomen, aes(x=height, y=weight)) + 
   geom_point(shape = 21, colour = "green", fill = "red", size = 5, stroke = 5)
-  
-  
