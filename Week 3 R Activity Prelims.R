@@ -67,6 +67,7 @@ library(tibble)
 #Put your noted difference in a new comment below
 #The tibble package is used to create/construct data frames
 #The NewWomen is a combination of 4 columns while the second (NewWomen1) line of code is a combination of 2 columns
+#The Just_Height, and Just_Weight columns are stored in the HeightandWeight attribute
 NewWomen<-tibble(HeightandWeight, height=Just_Height, weight=Just_Weight)
 NewWomen1<-tibble(height=Just_Height, weight=Just_Weight)
 View(NewWomen)
